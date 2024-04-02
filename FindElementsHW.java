@@ -30,6 +30,30 @@ public class FindElementsHW {
         System.out.println(element2.getText());
 
     }
+    @Test
+    public void findElementByCssSelector() {
+
+        //id -> #id
+        driver.findElement(By.cssSelector("#bar-notification"));
+        //class name -> .className
+        driver.findElement(By.cssSelector(".bar-notification"));
+
+        driver.findElement(By.cssSelector("body [tabindex='0']"));
+
+        driver.findElement(By.cssSelector("h2.product-title "));
+
+        driver.findElement(By.cssSelector(".footer-poweredby a"));
+
+        driver.findElement(By.cssSelector(".header"));
+
+        driver.findElement(By.cssSelector(".compare-products [value$='list']"));
+       // driver.findElement(By.cssSelector(""));
+        //driver.findElement(By.cssSelector(""));
+       // driver.findElement(By.cssSelector(""));
+    }
+
+
+    //xPath
     @AfterMethod
     public void tearDown() {driver.quit();}
 
