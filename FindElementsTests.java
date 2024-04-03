@@ -69,6 +69,33 @@ public class FindElementsTests {
         //end on -> $
         driver.findElement(By.cssSelector("[href$='work']"));
     }
+    //xPath
+    @Test
+    public void findElementByXpath(){
+        driver.findElement(By.xpath("//h1"));
+        driver.findElement(By.xpath("//*[@id='city']"));
+        // driver.findElement(By.className("input-container"));
+        driver.findElement(By.xpath("//*[@class='input-container']"));
+        //contains
+        driver.findElement(By.xpath("//*[contains(@href,'car')]"));
+        //start -> //*[starts-with
+        driver.findElement(By.xpath("//*[starts-with(@href,'/let')]"));
+        //Text
+        driver.findElement(By.xpath("//span[text()=' Never mistaken for anything else ']"));
+        driver.findElement(By.xpath("//span[.=' Never mistaken for anything else ']"));
+        driver.findElement(By.xpath("//span[contains(text(),'mistake')]"));
+        driver.findElement(By.xpath("//span[contains(.,'mistake')]"));
+
+        // search of parent element - //input[@id='username']/..
+       //     //div/a - child - css = div>a
+       //     //div//a - any level child - css = div a
+
+        //tag1[.tag2[@attr='value']]
+        //*[@id='firstName' or @name='lastName']
+         //*[@id='firstName' and @name='lastName']
+
+    }
+
 
 
     @AfterMethod

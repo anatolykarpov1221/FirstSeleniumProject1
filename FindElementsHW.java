@@ -46,15 +46,32 @@ public class FindElementsHW {
 
         driver.findElement(By.cssSelector(".header"));
 
-        driver.findElement(By.cssSelector(".compare-products [value$='list']"));
-       // driver.findElement(By.cssSelector(""));
-        //driver.findElement(By.cssSelector(""));
-       // driver.findElement(By.cssSelector(""));
-    }
+        driver.findElement(By.cssSelector("[href='/search']"));
+        //text() 'Newsletter'
+        driver.findElement(By.cssSelector(".master-wrapper-main div:nth-child(4) .title strong"));
+
+        driver.findElement(By.cssSelector(".center-3"));
+
+        driver.findElement(By.cssSelector("#vote-poll-1"));
+
+       //xPath  //xPath //xPath //xPath //xPath //xPath //xPath //xPath
+        driver.findElement(By.xpath("//input[@class='button-2 vote-poll-button']"));
+        driver.findElement(By.xpath("//*[@class='center-3']"));
+
+        //driver.findElement(By.cssSelector(".master-wrapper-main div:nth-child(4) .title strong"));
+        //driver.findElement(By.xpath("//*[@class='title strong']"));
 
 
-    //xPath
-    @AfterMethod
+        driver.findElement(By.xpath("//*[@href='/search']"));
+        driver.findElement(By.xpath("//*[@class='header']"));
+        driver.findElement(By.xpath("//*[@class='footer-poweredby']/a"));
+        driver.findElement(By.xpath("//h2[@class='product-title']"));
+        driver.findElement(By.xpath("//*[@tabindex='0']"));
+        driver.findElement(By.xpath("//*[@class='bar-notification']"));
+        driver.findElement(By.xpath("//*[@id='bar-notification']"));
+}
+
+@AfterMethod
     public void tearDown() {driver.quit();}
 
 }
