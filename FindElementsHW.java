@@ -53,6 +53,9 @@ public class FindElementsHW {
         driver.findElement(By.cssSelector(".center-3"));
 
         driver.findElement(By.cssSelector("#vote-poll-1"));
+    }
+        @Test
+        public void findElementByXpath(){
 
        //xPath  //xPath //xPath //xPath //xPath //xPath //xPath //xPath
         driver.findElement(By.xpath("//input[@class='button-2 vote-poll-button']"));
